@@ -47,7 +47,7 @@ class SnowFlake
 
     fill(150);
     rectMode(CENTER);
-    rect(250, 490, 500, 10);
+    rect(250, 500, 500, 5);
   }
 
   void lookDown()
@@ -75,7 +75,7 @@ class SnowFlake
 
   void wrap()
   {
-    if (y >= 490) {
+    if (y >= 495) {
       y = 0;
       x = (int) (Math.random()*500);
     }

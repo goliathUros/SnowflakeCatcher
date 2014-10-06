@@ -26,6 +26,7 @@ public void setup()
     freezie[i] = new SnowFlake();
   }
 }
+
 public void draw()
 {
   for (int i = 0; i < freezie.length; i++) {
@@ -36,6 +37,7 @@ public void draw()
     freezie[i].show();
   }
 }
+
 public void mouseDragged()
 {
   fill(0);
@@ -53,6 +55,7 @@ class SnowFlake
     y = (int) (Math.random()*500);
     isMoving = true;
   }
+
   public void show()
   {
     fill(42,220,0);
@@ -60,8 +63,9 @@ class SnowFlake
 
     fill(150);
     rectMode(CENTER);
-    rect(250, 490, 500, 10);
+    rect(250, 500, 500, 5);
   }
+
   public void lookDown()
   {
     if (get(x,y+3) != color(150)) {
@@ -70,25 +74,29 @@ class SnowFlake
       isMoving = true;
     }
   }
+
   public void erase()
   {
     noStroke();
     fill(150);
     ellipse(x, y, 7.5f, 7.5f);
   }
+
   public void move()
   {
     if (isMoving) {
       y = y + 1;
     }
   }
+
   public void wrap()
   {
-    if (y >= 490) {
+    if (y >= 495) {
       y = 0;
       x = (int) (Math.random()*500);
     }
   }
+  
 }
 
 
