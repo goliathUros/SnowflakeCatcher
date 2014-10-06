@@ -26,7 +26,7 @@ void mouseDragged()
 {
   fill(0);
   rectMode(CENTER);
-  rect(mouseX,mouseY, 15,15);
+  rect(mouseX,mouseY, 20,20);
 }
 
 class SnowFlake
@@ -80,7 +80,4 @@ class SnowFlake
       x = (int) (Math.random()*500);
     }
   }
-  
 }
-
-
